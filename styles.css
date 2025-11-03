@@ -171,6 +171,13 @@ body::before {
     box-shadow: var(--glow-cyan);
 }
 
+.nav-link.active {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    color: var(--bg-deep);
+    box-shadow: var(--glow-cyan);
+}
+
 /* Main Message */
 .main-message {
     margin-bottom: 40px;
