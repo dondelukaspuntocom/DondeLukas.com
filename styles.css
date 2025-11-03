@@ -1,16 +1,30 @@
-/* Reset y variables */
+/* Reset y variables futuristas */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #34495e;
-    --accent-color: #8b6f47;
-    --gold-color: #d4af37;
-    --light-bg: #f8f9fa;
-    --white: #ffffff;
-    --text-color: #333333;
-    --text-light: #6c757d;
-    --border-color: #dee2e6;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Paleta dark futurista */
+    --bg-deep: #0a0a0f;
+    --bg-card: rgba(20, 20, 30, 0.7);
+    --bg-secondary: rgba(30, 30, 45, 0.5);
+
+    /* Colores de texto */
+    --text-primary: #e8e8f0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6a6a7a;
+
+    /* Acentos neón */
+    --accent-cyan: #00f0ff;
+    --accent-magenta: #ff00ff;
+    --accent-purple: #8b5cf6;
+    --accent-blue: #3b82f6;
+
+    /* Bordes y efectos */
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.3);
+    --glow-purple: 0 0 30px rgba(139, 92, 246, 0.2);
+
+    /* Gradientes */
+    --gradient-bg: linear-gradient(135deg, #0a0a0f 0%, #1a0f2e 50%, #0f1a2e 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+    --gradient-highlight: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
 }
 
 * {
@@ -20,28 +34,52 @@
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--gradient-bg);
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: var(--text-color);
-    line-height: 1.6;
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Efecto de grid futurista en el fondo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .content {
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
-    padding: 40px 30px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--glow-purple);
+    padding: 50px 40px;
     text-align: center;
     animation: fadeIn 1s ease-in;
 }
@@ -49,7 +87,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -57,100 +95,142 @@ body {
     }
 }
 
-/* Logo Section */
+/* Logo Section - Minimalista y futurista */
 .logo-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .cross-symbol {
-    font-size: 60px;
-    color: var(--accent-color);
-    margin-bottom: 10px;
-    animation: pulse 2s ease-in-out infinite;
+    font-size: 80px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(var(--glow-cyan));
 }
 
-@keyframes pulse {
+@keyframes float {
     0%, 100% {
-        transform: scale(1);
+        transform: translateY(0px);
     }
     50% {
-        transform: scale(1.05);
+        transform: translateY(-10px);
     }
 }
 
 .site-title {
-    font-family: 'Crimson Text', serif;
-    font-size: 48px;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 56px;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-primary);
     margin: 10px 0 5px;
-    letter-spacing: 2px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .subtitle {
-    font-size: 24px;
-    color: var(--gold-color);
+    font-size: 28px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* Main Message */
 .main-message {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .coming-soon {
-    font-size: 32px;
-    color: var(--secondary-color);
-    font-weight: 300;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 18px;
+    color: var(--accent-cyan);
+    font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    opacity: 0.9;
 }
 
 .tagline {
-    font-size: 18px;
-    color: var(--text-light);
-    font-style: italic;
-    line-height: 1.8;
-    max-width: 600px;
+    font-size: 24px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
     margin: 0 auto;
 }
 
-/* Description */
+/* Description - Clean y legible */
 .description {
-    margin: 30px 0;
-    padding: 25px;
-    background: var(--light-bg);
-    border-radius: 12px;
-    border-left: 4px solid var(--accent-color);
+    margin: 40px 0;
+    padding: 30px;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border-left: 3px solid var(--accent-cyan);
+    text-align: left;
 }
 
 .description p {
-    font-size: 16px;
-    color: var(--text-color);
+    font-size: 17px;
+    color: var(--text-primary);
     line-height: 1.8;
+    margin-bottom: 15px;
 }
 
-/* Notify Section */
-.notify-section {
-    margin: 40px 0;
-    padding: 30px;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+.description p.topics {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(0, 240, 255, 0.05);
     border-radius: 12px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.description .highlight {
+    color: var(--accent-cyan);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 240, 255, 0.3);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.description strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Notify Section - Futurista */
+.notify-section {
+    margin: 50px 0;
+    padding: 35px;
+    background: rgba(139, 92, 246, 0.08);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .notify-text {
-    font-size: 18px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    color: var(--text-primary);
+    margin-bottom: 25px;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .email-form {
     display: flex;
-    gap: 10px;
-    max-width: 500px;
+    gap: 12px;
+    max-width: 550px;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
@@ -158,36 +238,48 @@ body {
 
 #emailInput {
     flex: 1;
-    min-width: 250px;
-    padding: 12px 20px;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    min-width: 280px;
+    padding: 14px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--border-subtle);
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
+    color: var(--text-primary);
     transition: all 0.3s ease;
     outline: none;
 }
 
+#emailInput::placeholder {
+    color: var(--text-muted);
+}
+
 #emailInput:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+    border-color: var(--accent-cyan);
+    background: rgba(0, 240, 255, 0.05);
+    box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.1);
 }
 
 #notifyBtn {
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
+    padding: 14px 36px;
+    background: var(--gradient-accent);
+    color: var(--bg-deep);
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-width: 140px;
+    min-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #notifyBtn:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--glow-cyan);
+    filter: brightness(1.1);
 }
 
 #notifyBtn:active {
@@ -195,8 +287,8 @@ body {
 }
 
 .success-message {
-    margin-top: 15px;
-    color: #28a745;
+    margin-top: 20px;
+    color: var(--accent-cyan);
     font-weight: 600;
     font-size: 16px;
     animation: slideDown 0.5s ease;
@@ -213,32 +305,35 @@ body {
     }
 }
 
-/* Social Links */
+/* Social Links - Minimalista */
 .social-links {
-    margin: 40px 0 30px;
+    margin: 50px 0 40px;
 }
 
 .connect-text {
-    font-size: 16px;
-    color: var(--text-light);
-    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .social-icon {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--light-bg);
-    border-radius: 50%;
-    color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    color: var(--text-secondary);
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -249,34 +344,38 @@ body {
 }
 
 .social-icon:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
+    background: var(--gradient-accent);
+    border-color: transparent;
+    color: var(--bg-deep);
     transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--glow-cyan);
 }
 
-/* Footer */
+/* Footer - Clean */
 .footer {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer p {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-bottom: 10px;
+    margin-top: 50px;
+    padding-top: 35px;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .verse {
-    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: var(--text-secondary);
     font-style: italic;
-    font-size: 15px;
-    color: var(--accent-color);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 12px;
+    border-left: 3px solid var(--accent-purple);
+}
+
+.footer-note {
+    font-size: 13px;
+    color: var(--text-muted);
     margin-top: 15px;
-    padding: 15px;
-    background: var(--light-bg);
-    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Responsive Design */
@@ -284,36 +383,40 @@ body {
 /* Tablets (768px and below) */
 @media (max-width: 768px) {
     .content {
-        padding: 35px 25px;
+        padding: 40px 30px;
     }
 
     .cross-symbol {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .site-title {
-        font-size: 40px;
+        font-size: 44px;
     }
 
     .subtitle {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .coming-soon {
-        font-size: 28px;
-        letter-spacing: 3px;
+        font-size: 16px;
+        letter-spacing: 2px;
     }
 
     .tagline {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    .description {
+        padding: 25px;
     }
 
     .description p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .notify-section {
-        padding: 25px 20px;
+        padding: 30px 25px;
     }
 
     .email-form {
@@ -328,42 +431,42 @@ body {
     }
 
     .social-icons {
-        gap: 15px;
+        gap: 12px;
     }
 }
 
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
     body {
-        padding: 10px;
+        padding: 15px;
     }
 
     .content {
-        padding: 30px 20px;
-        border-radius: 15px;
+        padding: 35px 25px;
+        border-radius: 20px;
     }
 
     .cross-symbol {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .site-title {
-        font-size: 32px;
-        letter-spacing: 1px;
+        font-size: 36px;
+        letter-spacing: 0;
     }
 
     .subtitle {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .coming-soon {
-        font-size: 24px;
-        letter-spacing: 2px;
+        font-size: 14px;
+        letter-spacing: 1px;
     }
 
     .tagline {
-        font-size: 15px;
-        line-height: 1.6;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
     .tagline br {
@@ -371,66 +474,74 @@ body {
     }
 
     .description {
-        padding: 20px 15px;
+        padding: 20px;
     }
 
     .description p {
-        font-size: 14px;
+        font-size: 15px;
+    }
+
+    .description p.topics {
+        padding: 15px;
     }
 
     .notify-section {
-        padding: 20px 15px;
+        padding: 25px 20px;
     }
 
     .notify-text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #emailInput,
     #notifyBtn {
         font-size: 15px;
-        padding: 10px 15px;
+        padding: 12px 20px;
     }
 
     .social-icon {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
     }
 
     .social-icon svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .footer p,
-    .verse {
-        font-size: 13px;
+        width: 22px;
+        height: 22px;
     }
 
     .verse {
-        padding: 12px;
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .footer-note {
+        font-size: 12px;
     }
 }
 
 /* Large Screens (1200px and above) */
 @media (min-width: 1200px) {
     .content {
-        padding: 60px 50px;
+        padding: 70px 60px;
     }
 
     .cross-symbol {
-        font-size: 70px;
+        font-size: 90px;
     }
 
     .site-title {
-        font-size: 56px;
+        font-size: 64px;
     }
 
     .coming-soon {
-        font-size: 36px;
+        font-size: 20px;
     }
 
     .tagline {
-        font-size: 20px;
+        font-size: 26px;
+    }
+
+    .description p {
+        font-size: 18px;
     }
 }

@@ -1,10 +1,21 @@
 # DondeLukas.com
 
-> La frontera digital entre el reino de Dios y las posibilidades de los algoritmos divinos en la tierra.
+> // La iglesia de garaje digital para nómadas que buscan verdad sin filtros
 
 ## Acerca de
 
-DondeLukas.com es una comunidad digital protestante cristiana en el mundo digital.
+**DondeLukas.com** es la nueva generación de iglesia protestante: digital, directa y sin pretensiones.
+
+**Somos protestantes por una razón muy específica:** Nos gusta reunirnos y hablar sobre Dios. Eso es todo.
+
+Aquí exploramos temas que otras iglesias evitan:
+- 🤖 **Inteligencia Artificial** y el alma
+- 👽 **Aliens** y la creación
+- 🗼 **La Torre de Babel** y la tecnología moderna
+- ⚔️ **La batalla por nuestras almas** en la era digital
+- 👑 **El Reino de los Cielos** que viene a juzgar
+
+Sin ritos extraños. Sin ornamentación barroca. Solo charlas profundas, estudio bíblico y buena onda en el espacio digital.
 
 ## Sitio "Estamos en Construcción"
 
@@ -15,18 +26,21 @@ Este repositorio contiene el sitio web placeholder de DondeLukas.com, optimizado
 
 ## Características
 
-- Diseño responsivo y moderno
-- Formulario de notificación de email
-- Enlaces a redes sociales
-- Animaciones suaves
-- Optimizado para SEO
+- 🎨 **Diseño futurista minimalista** - Dark mode con acentos neón sutiles
+- 📱 **Totalmente responsive** - Optimizado para móviles, tablets y desktop
+- 🔤 **Tipografía ultra legible** - Inter y Space Grotesk para máxima claridad
+- ✨ **Glassmorphism** - Efectos modernos con backdrop blur
+- 🌐 **Grid futurista** - Fondo con grid tech sutil
+- 📧 **Formulario de email** - Sistema de notificaciones para el lanzamiento
+- 🔗 **Enlaces sociales** - Conecta con la comunidad
+- ⚡ **Animaciones fluidas** - Transiciones suaves y profesionales
 
 ## Tecnologías
 
-- HTML5
-- CSS3 (con variables CSS y diseño responsivo)
-- JavaScript vanilla
-- Google Fonts (Montserrat y Crimson Text)
+- **HTML5** - Estructura semántica
+- **CSS3** - Variables CSS, gradientes, glassmorphism, responsive design
+- **JavaScript vanilla** - Sin dependencias externas
+- **Google Fonts** - Inter (cuerpo) y Space Grotesk (títulos)
 
 ## Instalación y Uso
 
@@ -39,11 +53,12 @@ git clone https://github.com/dondelukaspuntocom/DondeLukas.com.git
 
 ## Próximos Pasos
 
-Este es un sitio placeholder. El sitio completo incluirá:
-- Plataforma de comunidad
-- Recursos bíblicos
-- Contenido educativo
-- Herramientas de conexión
+Este es un sitio placeholder. La plataforma completa incluirá:
+- 💬 **Foros de discusión** - Charlas teológicas sin censura
+- 📖 **Recursos bíblicos** - Estudio profundo y accesible
+- 🎙️ **Transmisiones en vivo** - Conversaciones sobre temas de vanguardia
+- 🤝 **Comunidad global** - Nómadas digitales unidos por la fe
+- 🔬 **Explorando la intersección** - Tecnología, ciencia y teología
 
 ## Licencia
 
