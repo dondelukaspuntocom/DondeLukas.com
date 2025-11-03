@@ -4,9 +4,9 @@
 
 ## Acerca de
 
-DondeLukas.com es una comunidad digital protestante cristiana que une la fe y la tecnología para glorificar a Dios y servir a su pueblo.
+DondeLukas.com es una comunidad digital protestante cristiana en el mundo digital.
 
-## Sitio "Coming Soon"
+## Sitio "Estamos en Construcción"
 
 Este repositorio contiene el sitio web placeholder de DondeLukas.com, optimizado para:
 - 📱 Dispositivos móviles
@@ -47,7 +47,10 @@ Este es un sitio placeholder. El sitio completo incluirá:
 
 ## Licencia
 
-© 2025 DondeLukas.com - Todos los derechos reservados
+2025 DondeLukas.com - Todo el contenido de libre acceso
+
+Creative Commons Zero v1.0 Universal
+
 
 ---
 
