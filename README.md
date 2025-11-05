@@ -4,18 +4,18 @@
 
 ## Acerca de
 
-**DondeLukas.com** es la nueva generación de iglesia protestante: digital, directa y sin pretensiones.
+**DondeLukas.com** es una "iglesia" protestante digital.
 
-**Somos protestantes por una razón muy específica:** Nos gusta reunirnos y hablar sobre Dios. Eso es todo.
+**Somos protestantes por una razón muy específica:** Nos gusta reunirnos y hablar sobre Dios. Eso es todo. 
 
 Aquí exploramos temas que otras iglesias evitan:
-- 🤖 **Inteligencia Artificial** y el alma
-- 👽 **Aliens** y la creación
-- 🗼 **La Torre de Babel** y la tecnología moderna
-- ⚔️ **La batalla por nuestras almas** en la era digital
-- 👑 **El Reino de los Cielos** que viene a juzgar
+- 🤖 **Inteligencia Artificial y Robótica** **(La Marca de la Bestia)**
+- 👽 **Aliens** **(Demonios)**
+- 🗼 **La Torre de Babel** **(Tecnología)**y la tecnología moderna
+- ⚔️ **La batalla por nuestras almas** **(dioses con D minúscula)**en la era digital
+- 👑 **El Reino de los Cielos** **(Real)**que viene a juzgar
 
-Sin ritos extraños. Sin ornamentación barroca. Solo charlas profundas, estudio bíblico y buena onda en el espacio digital.
+Sin ritos exagerados. Un estudio sincero de la verdad. Solo charlas profundas, estudio bíblico y buena onda en el espacio digital.
 
 ## Sitio "Estamos en Construcción"
 
